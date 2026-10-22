@@ -97,7 +97,47 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center}
 .tagline:before,.tagline:after{content:"";flex:1;height:1px;background:var(--gold);opacity:.5}
 footer p{margin-top:14px;color:var(--muted);font-size:13px}
 
+.topbar{background:#0b0e13;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px}
+.topbar a{color:var(--gold-2)}
+.topbar .l{display:flex;gap:22px}
+.alt{background:var(--panel);border-block:1px solid var(--line)}
+.alt .steps{background:var(--bg)}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.sc .i{font-size:34px;color:var(--gold);margin-bottom:14px;display:block}
+.sc h3{font-size:16px;color:var(--gold-2);margin-bottom:8px}
+.sc p{color:var(--muted);font-size:16px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.steps div{padding:26px 22px;border-left:1px solid var(--line)}
+.steps div:first-child{border-left:0}
+.steps b{font-family:var(--serif);font-weight:400;color:var(--gold);font-size:28px;display:block;margin-bottom:8px}
+.steps h3{font-size:15px;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:15px;line-height:1.5}
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-family:var(--serif);letter-spacing:.06em;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+.faq details[open] summary:after{content:"\2212"}
+.faq p{color:var(--muted);margin-top:10px}
+.form{margin:56px auto 0;max-width:760px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px}
+.form h3{font-size:18px;color:var(--gold-2);margin-bottom:4px}
+.form>p{color:var(--muted);font-size:15px;margin-bottom:20px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:12px 14px;font:inherit;font-size:16px}
+.form textarea{min-height:110px;resize:vertical}
+.form .full{grid-column:1/-1}
+.form .btn{cursor:pointer;background:var(--gold);color:#07080b;margin-top:20px}
+.form .btn:hover{background:var(--gold-2)}
+.form small{display:block;color:var(--muted);font-size:13px;margin-top:12px}
 @media(max-width:860px){
+.cards4,.steps{grid-template-columns:repeat(2,1fr)}
+.steps div:nth-child(3){border-left:0}
+.steps div:nth-child(n+3){border-top:1px solid var(--line)}
+.fg{grid-template-columns:1fr}
+.topbar .r{display:none}
 .nav nav a:not(.btn){display:none}
 .values,.four{grid-template-columns:repeat(2,1fr)}
 .values div:nth-child(3){border-left:0}
@@ -130,12 +170,15 @@ footer p{margin-top:14px;color:var(--muted);font-size:13px}
 <symbol id="inf" viewBox="0 0 24 24"><path d="M12 12c-2-3-3-4-5-4a4 4 0 000 8c2 0 3-1 5-4zm0 0c2 3 3 4 5 4a4 4 0 000-8c-2 0-3 1-5 4z"/></symbol>
 </svg>
 
+<div class="topbar"><div class="wrap"><div class="l"><a href="tel:+2347057999295">+234 705 799 9295</a><a href="https://wa.me/2347057999295">WhatsApp</a></div><span class="r">Private consultations by appointment</span></div></div>
 <header>
 <div class="wrap nav">
 <a href="#top" class="logo" aria-label="NOIR home">NOIR</a>
 <nav aria-label="Main">
 <a href="#services">Services</a>
-<a href="#control">Control</a>
+<a href="#scenes">Scenes</a>
+<a href="#process">Process</a>
+<a href="#faq">FAQ</a>
 <a href="#contact" class="btn">Book a consultation</a>
 </nav>
 </div>
@@ -233,6 +276,43 @@ footer p{margin-top:14px;color:var(--muted);font-size:13px}
 </div>
 </section>
 
+<section id="scenes">
+<div class="wrap">
+<div class="head"><div class="eyebrow">Living with it</div><h2>Scenes that fit your day</h2></div>
+<div class="cards4">
+<div class="sc"><svg class="i"><use href="#bulb"/></svg><h3>Good morning</h3><p>Shades rise slowly, lights warm up and the climate settles to your preferred temperature.</p></div>
+<div class="sc"><svg class="i"><use href="#speaker"/></svg><h3>Movie night</h3><p>Lights dim, shades close and the sound system wakes with one touch.</p></div>
+<div class="sc"><svg class="i"><use href="#home"/></svg><h3>Welcome home</h3><p>The gate opens as you arrive, the door unlocks and your lights greet you.</p></div>
+<div class="sc"><svg class="i"><use href="#shield"/></svg><h3>Away</h3><p>Doors lock, cameras arm, and lights mimic life at home while you travel.</p></div>
+</div>
+</div>
+</section>
+
+<section id="process" class="alt">
+<div class="wrap">
+<div class="head"><div class="eyebrow">How it works</div><h2>From first call to final handover</h2></div>
+<div class="steps">
+<div><b>01</b><h3>Private consultation</h3><p>We learn how you live and walk through your space.</p></div>
+<div><b>02</b><h3>Design</h3><p>A plan shaped around your architecture, routines and budget.</p></div>
+<div><b>03</b><h3>Installation</h3><p>Concealed wiring and clean finishes with minimal disruption.</p></div>
+<div><b>04</b><h3>Handover</h3><p>You are shown how everything works, and we stay in touch.</p></div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<div class="head"><div class="eyebrow">Questions</div><h2>Good to know</h2></div>
+<div class="faq">
+<details><summary>How do I get started?</summary><p>Book a private consultation. We look at your space and goals, then send a clear proposal.</p></details>
+<details><summary>Can you add smart systems to an existing home?</summary><p>Yes. New builds are easiest because wiring can be hidden in the walls, but existing homes can be upgraded with a mix of wired and wireless solutions.</p></details>
+<details><summary>What happens if the internet goes down?</summary><p>A well-designed system keeps core functions such as lights, locks and scenes working locally. We explain what stays available for each system.</p></details>
+<details><summary>Is it difficult to use?</summary><p>No. Control is designed to feel simple: wall keypads, touchpanels, a phone app, or automated scenes that run on their own.</p></details>
+<details><summary>How much does it cost?</summary><p>It depends on the size of the home and the systems you choose. The consultation gives you a clear scope and price.</p></details>
+</div>
+</div>
+</section>
+
 <section id="contact" class="book">
 <div class="wrap">
 <div class="eyebrow">Consultations</div>
@@ -247,6 +327,19 @@ footer p{margin-top:14px;color:var(--muted);font-size:13px}
 <a href="https://noirsmarthomes.github.io"><span class="ring"><svg class="i"><use href="#globe"/></svg></span><span><small>Website</small>noirsmarthomes.github.io</span></a>
 <div><span class="ring"><svg class="i"><use href="#cal"/></svg></span><span><small>Consultations</small>Book your private architectural assessment today.</span></div>
 </div>
+<form class="form" id="enquiry">
+<h3>Tell us about your project</h3>
+<p>Share a few details and we will pick it up on WhatsApp.</p>
+<div class="fg">
+<div><label for="f-name">Name</label><input id="f-name" required autocomplete="name"></div>
+<div><label for="f-phone">Mobile number</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+<div><label for="f-prop">Property type</label><select id="f-prop"><option>Residence</option><option>Apartment</option><option>New build</option><option>Business</option><option>Other</option></select></div>
+<div><label for="f-reason">Reason for contacting us</label><select id="f-reason"><option>Private assessment</option><option>Building or remodeling</option><option>Upgrading an existing system</option><option>Moving into a new place</option><option>I want to learn more</option></select></div>
+<div class="full"><label for="f-msg">About your project</label><textarea id="f-msg"></textarea></div>
+</div>
+<button class="btn" type="submit">Send on WhatsApp</button>
+<small>This opens WhatsApp with your details filled in. Nothing is stored on this website.</small>
+</form>
 </div>
 </section>
 </main>
@@ -257,6 +350,14 @@ footer p{margin-top:14px;color:var(--muted);font-size:13px}
 <p>&copy; <span id="y">2026</span> NOIR Smart Home Automation</p>
 </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('enquiry').addEventListener('submit',function(e){
+e.preventDefault();
+var v=function(i){return document.getElementById(i).value.trim()};
+var t='Hello NOIR, I would like a consultation.\nName: '+v('f-name')+'\nPhone: '+(v('f-phone')||'not given')+'\nProperty: '+v('f-prop')+'\nReason: '+v('f-reason')+(v('f-msg')?'\nDetails: '+v('f-msg'):'');
+window.open('https://wa.me/2347057999295?text='+encodeURIComponent(t),'_blank','noopener');
+});
+</script>
 </body>
 </html>
